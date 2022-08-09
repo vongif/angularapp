@@ -1,0 +1,7 @@
+<p>Hola {{title}}</p>
+
+
+<input type="text" [(ngModel)]="title">
+<button [disabled]="modificado" (click)="cambiarTitle()">Cambiar contenido</button>
+
+<app-contador></app-contador>
