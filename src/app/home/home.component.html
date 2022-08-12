@@ -1,7 +1,30 @@
 <p>Hola {{title}}</p>
 
-
-<input type="text" [(ngModel)]="title">
+<label>Nombre
+<input type="text" [(ngModel)]="title" [class]="classImput">
+</label>
 <button [disabled]="modificado" (click)="cambiarTitle()">Cambiar contenido</button>
+<div>
+<label>Operaciones
+<input type="number" [(ngModel)]="operacion1">
+<input type="number" [(ngModel)]="operacion2">
+</label>
+</div>
+<button (click)="calcular()">Calcular</button>
+<div [ngClass]="{ready:resultado>0, error:resultado<0}">resultado:{{resultado}}</div>
+<div *ngIf="resultado>0">Resultado Positivo</div>
+<div [hidden]="resultado<0">Resultado Positivo</div>
+<div>
+    <h1>Productos</h1>
+</div>
+<div *ngFor="let producto of productos">
+    <!--{{producto | json}}-->
+    <h2>{{producto.Modelo}}</h2>
+    <h2>{{producto.Precio}}</h2>    
+</div>
+<button (click)="add()">Agregar</button>
+<div *ngFor="let categoria of categorias">
+    {{categorias}}
+</div>
 
 <app-contador></app-contador>
