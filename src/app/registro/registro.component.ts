@@ -14,9 +14,10 @@ export class RegistroComponent implements OnInit {
   ) {
     this.myForm = this.formu.group({
       nombre:["",[Validators.required, Validators.minLength(3)]],
-      apellido:[""],
+      apellido:["",[Validators.required, Validators.minLength(3)]],
+      telefono:["",[Validators.required, Validators.minLength(8)]],
       correo:["",[Validators.required]],
-      clave:["",[Validators.required]]
+      clave:["",[Validators.required, Validators.minLength(6), Validators.maxLength(10)]]
     })
    }
    registrarse(){
