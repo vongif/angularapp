@@ -1,10 +1,26 @@
 
 
+<h1>Productos pipe async</h1>
+
+<div *ngFor="let producto of productosObs | async ">
+    <!-- {{producto | json}} -->
+    <h2>{{producto.title | concatenar:'---':'?' }}</h2>
+    <p>{{producto.price | currency: 'ARS'}}</p>
+</div>
+
+
+<h1>Productos async / await</h1>
+
+<div *ngFor="let producto of productos">
+    <!-- {{producto | json}} -->
+    <h2>{{producto.title}}</h2>
+    <p>{{producto.price}}</p>
+</div>
 
 <h1>Productos</h1>
 
-    <div *ngFor="let producto of productos">
-        <!-- {{producto | json}} -->
-        <h2>{{producto.title}}</h2>
-        <p>{{producto.price}}</p>
-    </div>
+<div *ngFor="let producto of productos">
+    <!-- {{producto | json}} -->
+    <h2>{{producto.title}}</h2>
+    <p>{{producto.price}}</p>
+</div>

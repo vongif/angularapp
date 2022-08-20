@@ -9,6 +9,7 @@ import { CatalogoComponent } from './catalogo/catalogo.component';
 import { LoginComponent } from './login/login.component';
 import { DetalleComponent } from './detalle/detalle.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ConcatenarPipe } from './concatenar.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
     RegistroComponent,
     CatalogoComponent,
     LoginComponent,
-    DetalleComponent
+    DetalleComponent,
+    ConcatenarPipe
   ],
   imports: [
     BrowserModule,
