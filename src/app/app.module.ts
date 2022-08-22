@@ -10,6 +10,9 @@ import { LoginComponent } from './login/login.component';
 import { DetalleComponent } from './detalle/detalle.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ConcatenarPipe } from './concatenar.pipe';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatCardModule} from '@angular/material/card';
+
 
 @NgModule({
   declarations: [
@@ -19,14 +22,16 @@ import { ConcatenarPipe } from './concatenar.pipe';
     CatalogoComponent,
     LoginComponent,
     DetalleComponent,
-    ConcatenarPipe
-  ],
+    ConcatenarPipe,
+    
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule, ReactiveFormsModule
-  ],
+    FormsModule, ReactiveFormsModule, BrowserAnimationsModule,
+    MatCardModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

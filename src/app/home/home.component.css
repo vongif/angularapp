@@ -4,3 +4,15 @@
 .ready {
     background-color: chartreuse;
 }
+
+.example-card {
+    display: flex;
+    flex-direction: column
+}
+.imagen {
+    width: 100px;
+    height: 100px;
+}
+.mat-card {
+     margin-top: 10px;
+}
