@@ -23,9 +23,6 @@ export class ProductosService {
   getAllPipe(){
     return this.http.get("https://api.mercadolibre.com/sites/MLA/search?q=ipod").pipe(map((value:any)=>value.results))
   }
-  getById(id:string){
-    return this.http.get("https://api.mercadolibre.com/items/"+id)
-  }
   create(data:any){
     return this.http.post("URL",data)
   }

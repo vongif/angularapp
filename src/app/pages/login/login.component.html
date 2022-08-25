@@ -1,0 +1,26 @@
+<form [formGroup]="myForm" (ngSubmit)="logearse()">
+    <div>
+        <label>
+            Email
+        </label>
+        <input type="email" formControlName="correo"
+        [ngClass]="{error: myForm.get('correo')?.hasError('required') && myForm.get('correo')?.dirty}"
+        >
+        <div *ngIf="myForm.get('correo')?.errors && myForm.get('correo')?.dirty">
+        <p *ngIf="myForm.get('correo')?.hasError('required')">El campo es obligatorio</p>
+    </div>    
+    </div>
+    <div>
+        <label>
+            Contraseña
+        </label>
+        <input type="password" formControlName="pass"
+        [ngClass]="{error: myForm.get('pass')?.hasError('required') && myForm.get('pass')?.dirty, warning:myForm.get('pass')?.hasError('minlength')}"
+        >
+        <div *ngIf="myForm.get('pass')?.errors && myForm.get('pass')?.dirty">
+        <p *ngIf="myForm.get('pass')?.hasError('required')">El campo es obligatorio</p>
+        <p *ngIf="myForm.get('pass')?.hasError('minlength')">Debe escribir al menos 6 caracteres</p> 
+    </div>
+    </div>
+    <button type="submit" [disabled]="myForm.invalid">Login</button>
+</form>
