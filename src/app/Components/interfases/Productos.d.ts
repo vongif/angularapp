@@ -8,19 +8,33 @@ export interface Producto{
     category_id?: string;
     official_store_id: number;
     base_price: number;
-    thumbnail: string;
+    sold_quantity:number;
+    warranty: string;
+    thumbnail: string;      
+    accepts_mercadopago: boolean | string;
+    available_quantity: number;
+    pictures:any;
+    address: any;
     seller_address:{
-        id:string;
-        comment:string;
-    };
+      id: number,
+    }
     attributes:[
         {
-            [k:string]:string | number | boolean
+          name:string;
+          
         }
     ]
 }
 export interface ResponseProducto{
     site_id:string;
     query:string;
+    paging: {
+      total: number;
+      primary_results: number;
+      offset: number;
+      limit: number;
+    },
+    
+
     results:Producto[]
 }

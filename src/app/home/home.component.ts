@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ResponseProducto } from '../Components/interfases/Productos';
 import { ProductosService } from '../services/productos.service';
-
+import { Producto } from '../Components/interfases/Productos';
 
 
 @Component({
@@ -10,15 +11,15 @@ import { ProductosService } from '../services/productos.service';
 })
 export class HomeComponent implements OnInit {
   
-  productos:any=[]
+  productos:Producto[]=[]
+  loading:boolean=true
   productosAsync:any=[]
   productosObs:any=[]
-  loading=true
  
   constructor(private productosServices: ProductosService) 
   { this.productosServices.getAll() 
    .subscribe({
-    next:(data:any)=>{
+    next:(data:ResponseProducto)=>{
       console.log (data)
       this.productos=data.results
       this.loading=false

@@ -16,6 +16,9 @@ import { PagesComponent } from './pages/pages.component';
 import { MenuComponent } from './Components/menu/menu.component';
 import { MainComponent } from './listados/main/main.component';
 import { ListadosModule } from './listados/listados.module';
+import { MatMenuModule } from '@angular/material/menu';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
 
 
 @NgModule({
@@ -29,7 +32,6 @@ import { ListadosModule } from './listados/listados.module';
     ConcatenarPipe,
     PagesComponent,
     MenuComponent,
-    
     ],
   imports: [
     BrowserModule,
@@ -37,7 +39,10 @@ import { ListadosModule } from './listados/listados.module';
     HttpClientModule,
     FormsModule, ReactiveFormsModule, BrowserAnimationsModule,
     MatCardModule,
-    ListadosModule
+    ListadosModule,
+    MatMenuModule,
+    MatToolbarModule,
+    MatIconModule
     ],
   providers: [],
   bootstrap: [AppComponent]

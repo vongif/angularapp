@@ -1,10 +1,22 @@
 <div *ngIf="isLoading" >
     Loading...
 </div>
-<div *ngIf="!isLoading" >
-    <div>
+<div *ngIf="!isLoading">
+    
         <h1>{{producto.title}}</h1>
         <p>Precio {{producto.price | currency}}</p>
         <img src="{{producto.thumbnail}}" alt="">
-    </div>
+        
+        <img src="{{producto.pictures}}" alt="">
+        
+        <div>{{producto.warranty}}</div>
+        <div>Cantidad Disponible: {{producto.available_quantity}}</div>
+        <div>Mercado Pago: {{producto.accepts_mercadopago}}</div>
+        <div>Productos Vendidos: {{producto.sold_quantity}}</div>
+        <div>ID Vendedor: {{producto.seller_address.id}}</div>
+        <div>{{producto.address}}</div>
+        <div>{{producto.attributes}}</div>
+       
 </div>
+
+     
