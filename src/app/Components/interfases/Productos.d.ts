@@ -13,15 +13,35 @@ export interface Producto{
     thumbnail: string;      
     accepts_mercadopago: boolean | string;
     available_quantity: number;
-    pictures:any;
     address: any;
     seller_address:{
       id: number,
     }
+    pictures:[
+      {
+        url:any
+      },
+      {
+        url:any
+      },
+      {
+        url:any
+      },
+      {
+        url:any  
+      },
+      {
+        url:any
+      },
+      {
+        url:any
+      },
+    ]
     attributes:[
         {
-          name:string;
-          
+          value_id:number
+          name:string
+          value_name:string
         }
     ]
 }

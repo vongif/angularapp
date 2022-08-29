@@ -5,17 +5,23 @@
     
         <h1>{{producto.title}}</h1>
         <p>Precio {{producto.price | currency}}</p>
-        <img src="{{producto.thumbnail}}" alt="">
+   
         
-        <img src="{{producto.pictures}}" alt="">
-        
+        <img src="{{producto.pictures[0].url}}" alt="">
+        <img src="{{producto.pictures[1].url}}" alt="">
+        <img src="{{producto.pictures[2].url}}" alt="">
+        <img src="{{producto.pictures[3].url}}" alt="">
+        <img src="{{producto.pictures[4].url}}" alt="">
+        <img src="{{producto.pictures[5].url}}" alt="">
         <div>{{producto.warranty}}</div>
         <div>Cantidad Disponible: {{producto.available_quantity}}</div>
         <div>Mercado Pago: {{producto.accepts_mercadopago}}</div>
         <div>Productos Vendidos: {{producto.sold_quantity}}</div>
         <div>ID Vendedor: {{producto.seller_address.id}}</div>
         <div>{{producto.address}}</div>
-        <div>{{producto.attributes}}</div>
+        <div>{{producto.attributes[0].value_id}}</div>
+        <div>{{producto.attributes[0].name}}</div>
+        <div>Marca: {{producto.attributes[0].value_name}}</div>
        
 </div>
 
