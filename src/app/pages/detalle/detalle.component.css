@@ -1,0 +1,43 @@
+
+h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+} 
+
+.imagenes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+img {
+    border-top-left-radius: 5%;
+ border-top-right-radius: 5%;
+ border-bottom-left-radius: 5%;
+ border-bottom-right-radius: 5%;
+   padding-right: 3px;
+   padding-left: 3px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+}
+.precio{
+  font-size: 30px;
+  font-weight: 800;
+}
+.listado{
+  padding-top: 50px;
+  padding-left: 50px;
+  
+}
+p{
+    font-size: 25px;
+}
+
+
+

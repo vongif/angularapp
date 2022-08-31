@@ -19,6 +19,10 @@ import { ListadosModule } from './listados/listados.module';
 import { MatMenuModule } from '@angular/material/menu';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
+import {MatGridListModule} from '@angular/material/grid-list';
+
+
+
 
 
 @NgModule({
@@ -32,6 +36,8 @@ import {MatIconModule} from '@angular/material/icon';
     ConcatenarPipe,
     PagesComponent,
     MenuComponent,
+    
+    
     ],
   imports: [
     BrowserModule,
@@ -42,7 +48,8 @@ import {MatIconModule} from '@angular/material/icon';
     ListadosModule,
     MatMenuModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatGridListModule
     ],
   providers: [],
   bootstrap: [AppComponent]

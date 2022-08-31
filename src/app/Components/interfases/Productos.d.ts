@@ -1,5 +1,9 @@
 export interface Producto{
-    id:string;
+    id:number;
+    permalink: any;
+    seller:{
+      permalink:any;
+    },
     site_id:string;
     title:string;
     price:number;
@@ -13,10 +17,25 @@ export interface Producto{
     thumbnail: string;      
     accepts_mercadopago: boolean | string;
     available_quantity: number;
-    address: any;
+    condition:string;
+    sale_terms:[{
+      name:string;
+      value_name:string;
+    }]
     seller_address:{
-      id: number,
-    }
+      city:{
+        name:string;
+      }
+      state:{
+        name:string;
+      },
+    },
+    address: {
+      state_id:any;
+      state_name:string;
+      city_id: string | number;
+      city_name: string;
+    },
     pictures:[
       {
         url:any
@@ -36,14 +55,26 @@ export interface Producto{
       {
         url:any
       },
-    ]
+    ],
     attributes:[
-        {
-          value_id:number
-          name:string
-          value_name:string
-        }
-    ]
+        {name:string,value_name:string},
+        {name:string,value_name:string},
+        {name:string,value_name:string}, 
+        {name:string,value_name:string},
+        {name:string,value_name:string},
+        {name:string,value_name:string},
+        {name:string,value_name:string}, 
+        {name:string,value_name:string},
+        {name:string,value_name:string},
+        {name:string,value_name:string},
+        {name:string,value_name:string}, 
+        {name:string,value_name:string},
+        {name:string,value_name:string},
+        {name:string,value_name:string},
+        {name:string,value_name:string}, 
+        {name:string,value_name:string},
+        {name:string,value_name:string},    
+    ],
 }
 export interface ResponseProducto{
     site_id:string;
