@@ -12,9 +12,37 @@
     padding-right: 10px;
 }
 .mat-card {
-    margin-top: 10px;
-    
+    margin-top: 10px;  
 }
-.example-card {
-    max-width: 400px; 
+img{
+    border-radius: 10px;
+    width: 10%;
+    height: 10%;
 }
+h1{
+    margin-top: 80px;
+    margin-bottom: 60px;
+    margin-left: 30px;
+    font-size: 45px;
+    font-weight: 700;
+}
+
+.example-label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 120px;
+  }
+  
+  .example-button-row {
+    display: table-cell;
+    width: 490px;
+    margin-left: 20px;
+
+  }
+  .mat-card{
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 20px;
+
+  }

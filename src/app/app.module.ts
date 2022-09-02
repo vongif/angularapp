@@ -20,7 +20,8 @@ import { MatMenuModule } from '@angular/material/menu';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatGridListModule} from '@angular/material/grid-list';
-
+import {MatButtonModule} from '@angular/material/button';
+import { FilterPipe } from './filter.pipe';
 
 
 
@@ -36,8 +37,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     ConcatenarPipe,
     PagesComponent,
     MenuComponent,
-    
-    
+    FilterPipe,
+        
     ],
   imports: [
     BrowserModule,
@@ -49,7 +50,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatMenuModule,
     MatToolbarModule,
     MatIconModule,
-    MatGridListModule
+    MatGridListModule,
+    MatButtonModule
     ],
   providers: [],
   bootstrap: [AppComponent]

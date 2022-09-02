@@ -1,52 +1,24 @@
-<h1>Productos pipe async</h1>
+<h1>Lista de Productos </h1>
 
-
-<!--
-    <div *ngFor="let producto of productosObs | async ">   
-    <h2>{{producto.title}}</h2>
-    <img src="{{producto.thumbnail}}" alt="">
-    <p>{{producto.price | currency: 'ARS'}}</p>
-    </div>
--->
-
-<mat-card *ngFor="let producto of productosObs | async " class="example-card">
-    <mat-card-title-group>
-        <mat-card-title>{{producto.title}}</mat-card-title>
-        <mat-card-subtitle>{{producto.price | currency: 'ARS'}}</mat-card-subtitle>
-
-    </mat-card-title-group>
-    <img class="imagen" mat-card-sm-image src="{{producto.thumbnail}}">
-   
-    <mat-card-content>
-        
-    </mat-card-content>
     
-    <mat-card-actions>
-        <button routerLink="/productos/{{producto.id}}" class="boton" mat-button>Ver detalle</button>
-        
-        <hr>
-    </mat-card-actions>
-    
-</mat-card>
-
-
-
-
-<!--
-<h1>Productos async / await</h1>
-
-
-<div *ngFor="let producto of productos">
-    
-    <h2>{{producto.title}}</h2>
-    <p>{{producto.price}}</p>
-</div>
-
-<h1>Productos</h1>
-
-<div *ngFor="let producto of productos">
-    
-    <h2>{{producto.title}}</h2>
-    <p>{{producto.price}}</p>
-</div>
--->
+<mat-card>       
+            <div>
+                <input type="text" name="filterPost" placeholder="Search..." [(ngModel)]="filterPost">
+            </div>
+            
+            <div *ngFor="let producto of productosObs | filter:filterPost">
+                <mat-card-title-group>
+                    <mat-card-title>{{producto.title}}</mat-card-title>
+                    <mat-card-subtitle>{{producto.price | currency: 'ARS'}}</mat-card-subtitle>
+            
+                    <img class="imagen" mat-card-sm-image src="{{producto.thumbnail}}">
+                </mat-card-title-group>
+                <mat-card-actions>
+                    <div>
+                        <div class="example-button-row">
+                            <button routerLink="/productos/{{producto.id}}" mat-raised-button color="primary">Ver Detalle</button>
+                        </div>
+                    </div>
+                </mat-card-actions>
+            </div>
+</mat-card>     

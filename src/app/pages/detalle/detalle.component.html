@@ -11,7 +11,7 @@
         <img  src="{{producto.pictures[4].url}}" alt="">       
         <img  src="{{producto.pictures[5].url}}" alt="">
         </div>
-        <div class="listado"> 
+     <!-- <div class="listado"> 
         <p class="precio">   Precio: {{producto.price | currency}}
         <br>
         <br>    
@@ -43,4 +43,42 @@
         <p>*  Producto ID {{producto.id}}     
         </div>     
                 
-</div>
+</div>-->  
+
+
+<mat-card class="example-card">
+    <mat-card-title>Precio: {{producto.price | currency}}</mat-card-title>
+    <mat-card-subtitle>Cantidad Disponible: {{producto.available_quantity}}</mat-card-subtitle>
+    <mat-card-content>
+        <p>*  {{producto.attributes[1].name}}: {{producto.attributes[1].value_name}}     
+            <p>*  {{producto.attributes[2].name}}: {{producto.attributes[2].value_name}}
+            <p>*  {{producto.attributes[3].name}}: {{producto.attributes[3].value_name}}       
+            <p>*  {{producto.attributes[4].name}}: {{producto.attributes[4].value_name}}        
+            <p>*  {{producto.attributes[4].name}}: {{producto.attributes[4].value_name}}        
+            <p>*  {{producto.attributes[5].name}}: {{producto.attributes[5].value_name}}
+            <p>*  {{producto.attributes[6].name}}: {{producto.attributes[6].value_name}}
+            <p>*  {{producto.attributes[7].name}}: {{producto.attributes[7].value_name}}
+            <p>*  {{producto.attributes[8].name}}: {{producto.attributes[8].value_name}}
+            <p>*  {{producto.attributes[9].name}}: {{producto.attributes[9].value_name}}  
+            <p>*  {{producto.attributes[10].name}}: {{producto.attributes[10].value_name}}  
+            <p>*  {{producto.attributes[11].name}}: {{producto.attributes[11].value_name}}
+            <p>*  {{producto.attributes[12].name}}: {{producto.attributes[12].value_name}}        
+            <p>*  {{producto.attributes[13].name}}: {{producto.attributes[13].value_name}}        
+            <p>*  {{producto.attributes[14].name}}: {{producto.attributes[14].value_name}}
+            <p>*  {{producto.attributes[15].name}}: {{producto.attributes[15].value_name}}
+            <p>*  {{producto.attributes[16].name}}: {{producto.attributes[16].value_name}}
+            <p>*  {{producto.warranty}}
+            <p>*  Cantidad Disponible: {{producto.available_quantity}}
+            <p>*  Productos Vendidos: {{producto.sold_quantity}}
+            <p>*  Ciudad: {{producto.seller_address.city.name}}
+            <p>*  Localidad: {{producto.seller_address.state.name}}
+            <p>*  Facturacion: {{producto.sale_terms[0].name}}
+            <p>*  {{producto.sale_terms[0].value_name}}  
+            <p>*  Datos Vendedor: {{producto.address.state_id}}
+            <p>*  Producto ID {{producto.id}}     
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>

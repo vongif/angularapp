@@ -17,7 +17,8 @@ export class HomeComponent implements OnInit {
   productosObs:any=[]
  
   constructor(private productosServices: ProductosService) 
-  { this.productosServices.getAll() 
+  {  
+    this.productosServices.getAll() 
    .subscribe({
     next:(data:ResponseProducto)=>{
       console.log (data)
@@ -28,11 +29,10 @@ export class HomeComponent implements OnInit {
       console.log(error)
     }
     })  
-
     this.productosObs = this.productosServices.getAllPipe()
     this.init()
-
   }
+  filterPost='';
   async init(){
     try {
     const response:any = await this.productosServices.getAllPromise() 
