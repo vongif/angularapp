@@ -21,10 +21,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatButtonModule} from '@angular/material/button';
-import { FilterPipe } from './filter.pipe';
-
-
-
+import { ProductComponent } from './Components/product/product.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +34,7 @@ import { FilterPipe } from './filter.pipe';
     ConcatenarPipe,
     PagesComponent,
     MenuComponent,
-    FilterPipe,
+    ProductComponent,
         
     ],
   imports: [
@@ -51,7 +48,8 @@ import { FilterPipe } from './filter.pipe';
     MatToolbarModule,
     MatIconModule,
     MatGridListModule,
-    MatButtonModule
+    MatButtonModule,
+    
     ],
   providers: [],
   bootstrap: [AppComponent]

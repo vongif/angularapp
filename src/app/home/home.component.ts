@@ -32,7 +32,7 @@ export class HomeComponent implements OnInit {
     this.productosObs = this.productosServices.getAllPipe()
     this.init()
   }
-  filterPost='';
+  
   async init(){
     try {
     const response:any = await this.productosServices.getAllPromise() 
