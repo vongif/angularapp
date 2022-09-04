@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
 
 
 @Component({
@@ -8,8 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  isLogin:boolean=false
 
+  constructor(private authService:AuthService) {
+    
+    this.authService.isLogin()
+    .subscribe(value=>{
+      this.isLogin=value
+    })
+  }
+  logout(){
+    this.authService.logout()
+  }
   ngOnInit(): void {
   }
 

@@ -35,6 +35,7 @@ import { ProductComponent } from './Components/product/product.component';
     PagesComponent,
     MenuComponent,
     ProductComponent,
+    
         
     ],
   imports: [
@@ -49,6 +50,7 @@ import { ProductComponent } from './Components/product/product.component';
     MatIconModule,
     MatGridListModule,
     MatButtonModule,
+    
     
     ],
   providers: [],

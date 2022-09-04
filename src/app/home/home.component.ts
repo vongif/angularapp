@@ -3,7 +3,6 @@ import { ResponseProducto } from '../Components/interfases/Productos';
 import { ProductosService } from '../services/productos.service';
 import { Producto } from '../Components/interfases/Productos';
 
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -18,6 +17,10 @@ export class HomeComponent implements OnInit {
  
   constructor(private productosServices: ProductosService) 
   {  
+    this.productosObs = this.productosServices.getAllPipe()
+    this.init()
+  }
+  init(){
     this.productosServices.getAll() 
    .subscribe({
     next:(data:ResponseProducto)=>{
@@ -29,18 +32,21 @@ export class HomeComponent implements OnInit {
       console.log(error)
     }
     })  
-    this.productosObs = this.productosServices.getAllPipe()
+  }
+  recargar(){
     this.init()
   }
   
+  /*
   async init(){
     try {
     const response:any = await this.productosServices.getAllPromise() 
       this.productosAsync =  response["results"]
     } catch (e) {  
     }
-    
-  }
+  }*/
+
+
 
   ngOnInit(): void {
   }

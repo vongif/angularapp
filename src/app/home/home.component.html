@@ -4,17 +4,10 @@
 <mat-card>
 
     <div *ngFor="let producto of productos" class="tarjeta">
-        <mat-card-title-group>
-            <mat-card-title>{{producto.title}}</mat-card-title>
-            <mat-card-subtitle>{{producto.price | currency: 'ARS'}}</mat-card-subtitle>
-        </mat-card-title-group>
-        <img class="imagen" mat-card-sm-image src="{{producto.thumbnail}}">
-        <mat-card-actions>
-            <div class="example-button-row">
-                <button class="boton1" routerLink="/productos/{{producto.id}}" mat-raised-button color="primary">Ver Detalle</button>
-            </div>
-        </mat-card-actions>
-    <hr>
+        <app-product [data]="producto"
+                     (reload)="recargar()" 
+        >
+        </app-product>
 
     </div>
 </mat-card>

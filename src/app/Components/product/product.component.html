@@ -1,1 +1,14 @@
-<p>product works!</p>
+
+<mat-card-title-group>
+    <mat-card-title>{{data.title}}</mat-card-title>
+    <mat-card-subtitle>{{data.price | currency: 'ARS'}}</mat-card-subtitle>
+</mat-card-title-group>
+<img id="cambiarImg" class="imagen" mat-card-sm-image [src]="data.thumbnail">
+
+<mat-card-actions>
+    <div class="example-button-row">
+        <button class="boton1" routerLink="/productos/{{data.id}}" mat-raised-button color="primary">Ver Detalle</button>
+        <button (click)="eliminar()" class="boton1" mat-raised-button color="warn" *ngIf="isLogin">Eliminar</button>
+    </div>
+</mat-card-actions>
+<hr>

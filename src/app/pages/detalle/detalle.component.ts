@@ -12,6 +12,7 @@ import { ProductosService } from 'src/app/services/productos.service';
 export class DetalleComponent implements OnInit {
   
   producto!:Producto
+
   isLoading:boolean=true
   
   constructor(

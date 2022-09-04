@@ -8,16 +8,18 @@
   <mat-toolbar color="primary">
     <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
     <a routerLink="/">INICIO</a>
-  
     <span class="example-spacer"></span>
-  
+    <a routerLink="/alta" routerLinkActive="active" *ngIf="!isLogin" >
     <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="account_circle"></mat-icon>
-    <br>
-    <a routerLink="/alta" routerLinkActive="active">
-    Registrarse
+      Registrarse
     </a>
-    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="login"></mat-icon>
-    <a routerLink="/ingresar" routerLinkActive="active"> 
-    Ingresar
+    <a routerLink="/ingresar" routerLinkActive="active" *ngIf="!isLogin"> 
+    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="login"></mat-icon>  
+      Ingresar
     </a>
+    <a (click)="logout()" *ngIf="isLogin"> 
+    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="logout" ></mat-icon>  
+    Salir
+    </a>
+    
   </mat-toolbar>

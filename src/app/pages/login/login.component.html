@@ -22,6 +22,7 @@
         <p *ngIf="myForm.get('pass')?.hasError('minlength')">Debe escribir al menos 6 caracteres</p> 
     </div>
     </div>
-    <button type="submit" [disabled]="myForm.invalid">Login</button>
+    <button (click)="login()" type="submit">Login</button>
 </form>
        
+   <!--  [disabled]="myForm.invalid"   esto va en el boton Login para que no funcione --> 
